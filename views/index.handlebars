@@ -1,4 +1,51 @@
-<img src="/public/assets/Burger.png" width="200px" height="200px"> </img>
+<div class="container">
 
-<h1>Eat Da Burger!</h1>
 
+    <h1>Eat Da Burger!</h1>
+
+    <!--List of available burgers-->
+    <div class="row">
+        <div class="col-sm-6" id="availableBurgers">
+            <ul>
+                {{#each burger}}
+                {{#unless this.devoured}}
+                {{>burger devoured = false}}
+                <li>{{this.id}} {{this.burger_name}}</li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <!--Devoured Burgers-->
+        <div class="col-sm-6" id="devouredBurgers">
+            <ul>
+                {{#each burger}}
+                {{#if this.devoured}}
+                {{>burger devoured = true}}
+                <li>{{this.id}} {{this.burger_name}}</li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+
+    <form action="/" method="POST">
+        <textarea type="text" id="burgerNameInput" name="burger-name"></textarea>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+
+    <p>Enter a burger you would like to eat. Click the "Submit button"</p>
+
+
+    <!--<li>
+        {{burgerNameInput}}
+
+        <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+            {{#if devoured}}Devour it!{{/if}}
+        </button>
+
+
+    </li>-->
+
+</div>
