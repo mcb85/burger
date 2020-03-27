@@ -46,7 +46,6 @@ var orm = {
 
     insertOne: function (table, cols, vals, cb) {
         var query = "INSERT into" + table;
-
         query += " (";
         query += cols.toString();
         query += ") ";

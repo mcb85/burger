@@ -1,8 +1,7 @@
+
 <div class="container">
-
-
     <h1>Eat Da Burger!</h1>
-
+    <img class="mx-auto margin justify-center" src="./assets/Burger.png" width="200px" height="200px"></img>
     <!--List of available burgers-->
     <div class="row">
         <div class="col-sm-6" id="availableBurgers">
@@ -10,7 +9,12 @@
                 {{#each burger}}
                 {{#unless this.devoured}}
                 {{>burger devoured = false}}
-                <li>{{this.id}} {{this.burger_name}}</li>
+                <li>
+                    <p>
+                        {{this.id}} {{this.burger_name}}
+                        <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">Devour it!<button>
+                    </p>
+                </li>
                 {{/unless}}
                 {{/each}}
             </ul>
@@ -37,15 +41,5 @@
 
     <p>Enter a burger you would like to eat. Click the "Submit button"</p>
 
-
-    <!--<li>
-        {{burgerNameInput}}
-
-        <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
-            {{#if devoured}}Devour it!{{/if}}
-        </button>
-
-
-    </li>-->
 
 </div>

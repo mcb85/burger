@@ -2,7 +2,36 @@
     background-color: blue;
 }
 
-body {
-    background-color: goldenrod;
+html {
+    background-color: rgb(247, 182, 20);
+    margin: 0;
 }
 
+.container {
+    background-color:  rgb(247, 182, 20);
+    color: red;
+}
+
+body {
+    background-color: rgb(247, 182, 20);
+}
+
+#main {
+    background-color: rgb(247, 182, 20);
+}
+#mainBody {
+    background-color: rgb(247, 182, 20);
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    margin: auto;
+    background-color: rgb(247, 182, 20);
+}
+
+form {
+    align-content: center;
+}
