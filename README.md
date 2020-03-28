@@ -1,1 +1,2 @@
 # burger
+This app provides the user with the ability to add the names of any burgers they would like to eat. Each burger is populated on the page in the left column with an attached "Devour It!" button. The user can then choose to devour the burger by clicking that button. When the button is clicked, the name of the burger is displayed in the right column. The user is able to add as many burgers as they would like. 
