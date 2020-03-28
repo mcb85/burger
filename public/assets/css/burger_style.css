@@ -1,5 +1,9 @@
 #submit {
     background-color: blue;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+
 }
 
 html {
@@ -28,10 +32,41 @@ h1 {
 }
 
 img {
+    display: block;
     margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
     background-color: rgb(247, 182, 20);
 }
 
 form {
     align-content: center;
+}
+
+ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+
+/*Need to display each list item on a separate line*/
+/*li {
+       
+}*/
+
+
+/*Need to move "Devour it Button to Right of Burger Name*/
+/*#change-devoured {
+    float:left;
+}*/
+
+#burgerNameInput {
+    display: block;
+    margin: auto;
+    width: 300px;
+}
+
+p {
+    text-align: center;
 }

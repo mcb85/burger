@@ -41,11 +41,11 @@ var orm = {
             console.log(result);
             cb(result);
         });
-    }, 
+    },
 
 
     insertOne: function (table, cols, vals, cb) {
-        var query = "INSERT into" + table;
+        var query = "INSERT INTO " + table;
         query += " (";
         query += cols.toString();
         query += ") ";
@@ -79,7 +79,7 @@ var orm = {
 
     }
 
-}
+};
 
 
 module.exports = orm;

@@ -1,19 +1,17 @@
 
 <div class="container">
     <h1>Eat Da Burger!</h1>
-    <img class="mx-auto margin justify-center" src="./assets/Burger.png" width="200px" height="200px"></img>
+    <img class="mx-auto margin justify-center" src="./assets/Burger.png" width="300px" height="300px" alt="winkBurger"></img>
+    <br>
     <!--List of available burgers-->
     <div class="row">
         <div class="col-sm-6" id="availableBurgers">
             <ul>
-                {{#each burger}}
+                {{#each burgers}}
                 {{#unless this.devoured}}
-                {{>burger devoured = false}}
+                {{>burgers/burger-block devoured = false}}
                 <li>
-                    <p>
-                        {{this.id}} {{this.burger_name}}
-                        <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">Devour it!<button>
-                    </p>
+                    <li>{{this.id}} {{this.burger_name}}</li>
                 </li>
                 {{/unless}}
                 {{/each}}
@@ -23,10 +21,12 @@
         <!--Devoured Burgers-->
         <div class="col-sm-6" id="devouredBurgers">
             <ul>
-                {{#each burger}}
+                {{#each burgers}}
                 {{#if this.devoured}}
-                {{>burger devoured = true}}
-                <li>{{this.id}} {{this.burger_name}}</li>
+                {{>burgers/burger-block devoured = true}}
+                <ul>
+                    <li>{{this.id}} {{this.burger_name}}</li>
+                </ul>
                 {{/if}}
                 {{/each}}
             </ul>
@@ -34,7 +34,7 @@
     </div>
 
 
-    <form action="/" method="POST">
+    <form class="create-form" action="/" method="POST">
         <textarea type="text" id="burgerNameInput" name="burger-name"></textarea>
         <button id="submit" type="submit">Submit</button>
     </form>
